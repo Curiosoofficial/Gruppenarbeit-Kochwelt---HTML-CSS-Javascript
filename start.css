@@ -1,0 +1,186 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* header {
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 40%);
+}
+
+header img {
+  width: 200px;
+}
+
+
+
+.navbar-link {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar-link li {
+  list-style: none;
+  padding: 10px;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-link a:hover,
+.navbar-link a:active {
+  text-decoration: solid;
+  color: #008000;
+  border-bottom: solid 3px #008000;
+} */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: #008000;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.headline {
+  height: 50vh;
+  width: 100%;
+  background-image: url(start-img/asparagus-2169305.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 82px;
+  color: white;
+  text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+}
+
+.headline p {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+}
+
+.sec2 {
+  background-color: rgb(255, 255, 255);
+}
+
+.sec-2-headline {
+  display: flex;
+  justify-content: center;
+}
+
+.sec-2-images {
+  display: flex;
+  justify-content: center;
+  gap: 165px;
+}
+
+.sec-2-images img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img-p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.img-p p {
+  margin: 20px;
+}
+
+.img-p img:hover {
+  box-shadow: 0 0 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sec-2-headline h2 {
+  margin: 20px;
+}
+
+.sec3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(start-img/platter-2009590.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.sec3::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.sec-3-headline {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  padding-bottom: 0;
+  z-index: 2;
+}
+
+.sec-3-headline:last-child {
+  padding-bottom: 40px;
+}
+
+.sec-3-headline h2 {
+  margin-bottom: 16px;
+}
+
+.sec-3-headline p {
+  text-align: center;
+}
+
+/* footer {
+  background-color: #403b3b;
+  width: 100%;
+  height: 30vh;
+} */
+
+@media (max-width: 1000px) {
+  .sec-2-images {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

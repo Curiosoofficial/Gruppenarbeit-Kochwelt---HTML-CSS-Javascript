@@ -1,0 +1,275 @@
+/* HEADER */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: center;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 40%);
+}
+
+header img {
+  width: 200px;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar-link li {
+  list-style: none;
+  padding: 10px;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-link a:hover,
+.navbar-link a:active {
+  text-decoration: solid;
+  color: #008000;
+  border-bottom: solid 3px #008000;
+}
+
+/* Mobile Menu */
+/* Button */
+
+.mobile-menu-button {
+  position: relative;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 225ms ease-in-out;
+}
+
+.mobile-menu-button-burger {
+  width: 30px;
+  height: 3px;
+  background: #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 225ms ease-in-out;
+}
+
+.mobile-menu-button-burger::before,
+.mobile-menu-button-burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 225ms ease-in-out;
+}
+
+.mobile-menu-button-burger::before {
+  transform: translateY(-12px);
+}
+
+.mobile-menu-button-burger::after {
+  transform: translateY(12px);
+}
+
+.mobile-menu-button.open .mobile-menu-button-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.mobile-menu-button.open .mobile-menu-button-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.mobile-menu-button.open .mobile-menu-button-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* Menu */
+.mobile-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: none;
+  justify-content: center;
+  list-style: none;
+  /* opacity: 0; */
+  transition: opacity 225ms ease-in-out;
+  z-index: 2;
+}
+
+.mobile-menu.open {
+  /* opacity: 1; */
+  display: flex;
+}
+
+.mobile-navbar-link {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  padding-right: 100px;
+  padding-bottom: 16px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #545454;
+  z-index: 400;
+  padding-bottom: 16px;
+}
+
+.footer-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 500;
+}
+
+/* .footer-row:last-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+} */
+
+.footer-container {
+  display: flex;
+  color: white;
+  padding: 16px;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-container img {
+  object-fit: contain;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-container img:hover {
+  opacity: 0.8;
+}
+
+.footer-container a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.sozial-media-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+@media (max-width: 910px) {
+  .navbar-link {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+}
+
+@media (max-width: 660px) {
+  .footer-container .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .mobile-navbar-link {
+    padding-right: 50px;
+  }
+
+  .footer-row {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-container {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .mobile-navbar-link {
+    padding-right: 25px;
+  }
+
+  .footer-container.links {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .delimiter {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  header .navbar-link {
+    font-size: 0.7rem;
+  }
+
+  .footer-container .logo {
+    width: 120px;
+  }
+
+  .sozial-media-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 350px) {
+  header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mobile-navbar-link {
+    padding-right: 10px;
+  }
+}

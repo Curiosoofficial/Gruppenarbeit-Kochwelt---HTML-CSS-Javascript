@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="bolo.css" />
+  <link rel="stylesheet" href="templates/style-template.css">
+  <link rel="shortcut icon" href="img/logo_small.png" type="image/x-icon">
+
+</head>
+
+<body onload="init(), render(menus['rindergulasch'])">
+  <div w3-include-html="templates/header.html"></div>
+  <section class="recipe">
+    <div class="headline">
+      <h1 id="title"></h1>
+      <img id="title-image" />
+    </div>
+    <div class="recipe-additional-infos">
+      <div class="recipe-additional-infos-item">
+        <img src="img/icons/clock-regular.svg" alt="" />
+        <span id="recipe-duration"> </span>
+      </div>
+      <div class="recipe-additional-infos-item">
+        <img src="img/icons/brain-solid.svg" alt="" />
+        <span id="difficulty"> </span>
+      </div>
+      <div class="recipe-additional-infos-item">
+        <img src="img/icons/calendar-alt-regular.svg" />
+        <span id="create"> </span>
+      </div>
+    </div>
+    <div class="recipe-portions">
+      <div>Zutaten für</div>
+      <input id="recipe-portions-input" type="number" min="1" />
+      <button onclick="renderIngredients(menus['rindergulasch'])" id="recipe-portions-button">Portionen</button>
+    </div>
+    </div>
+    <div class="recipe-ingredients" id="recipe-ingredients"></div>
+    <div class="preparation">
+      <h3>Zubereitung</h3>
+      <div class="preparation-duration">
+        <div class="preparation-duration-item">
+          <img src="img/icons/clock-regular.svg" />
+          <span id="preparation-duration-time"> </span>
+        </div>
+        <div class="preparation-duration-item">
+          <img src="img/icons/clock-regular.svg" />
+          <span id="preparation-duration-total-time"> </span>
+        </div>
+      </div>
+      <div id="preparation-text"></div>
+    </div>
+    <div class="creator">
+      <h4>Rezept erstellt von</h4>
+      <div class="creator-details">
+        <img id="creator-image" />
+        <div id="creator-name"></div>
+      </div>
+    </div>
+  </section>
+
+  <div w3-include-html="templates/footer.html"></div>
+
+  <script src="menus.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

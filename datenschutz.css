@@ -1,0 +1,49 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  /* background-color: rgb(236, 230, 230); */
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.privacy {
+  margin: 80px;
+}
+
+.privacy ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .privacy {
+    margin: 40px;
+  }
+
+  .privacy h1 {
+    font-size: 1.8rem;
+  }
+
+  .privacy h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .privacy {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .privacy {
+    margin: 20px;
+  }
+
+  .privacy h1 {
+    font-size: 1.6rem;
+  }
+}

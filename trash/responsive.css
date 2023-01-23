@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  header .navbar-link li {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  header .navbar-link {
+    font-size: 0.7rem;
+  }
+}
